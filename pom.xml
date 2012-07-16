@@ -144,7 +144,7 @@
 					 </goals>
 					 <configuration>
 						<mainClass> 
-							org.data2semantics.modules.ModuleWrapper
+							org.data2semantics.modules.D2S_ModuleWrapper
 						</mainClass>
 						<arguments>
 							<argument>org.data2semantics.modules.D2S_CreateSnapshot</argument>
@@ -191,39 +191,7 @@
 		     </build>
 		</profile>		
 		<profile>
-		     <id>create-annotation-ontology</id>
-		     <build>
-			 <defaultGoal>package</defaultGoal>
-
-			 <plugins>
-			     <plugin>
-				 <groupId>org.codehaus.mojo</groupId>
-				 <artifactId>exec-maven-plugin</artifactId>
-				 <executions>
-				     <execution>
-					 <phase>package</phase>
-					 <goals>
-					     <goal>java</goal>
-					 </goals>
-					 <configuration>
-						<mainClass> 
-							org.data2semantics.modules.D2S_AnnotationRenderer
-						</mainClass>
-						<arguments>
-						     <argument>results/bioportal</argument>
-							 <argument>short-list.ttl</argument>
-							 <argument>results/annotation-ontology.n3</argument>
-							 <argument>AO</argument>
-						</arguments>													     
-					 </configuration>
-				     </execution>
-				 </executions>
-			     </plugin>
-			 </plugins>
-		     </build>
-		</profile>		
-		<profile>
-		     <id>create-open-annotation-model</id>
+		     <id>annotation-renderer</id>
 		     <build>
 			 <defaultGoal>package</defaultGoal>
 
